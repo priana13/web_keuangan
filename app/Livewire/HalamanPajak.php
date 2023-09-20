@@ -8,6 +8,6 @@ class HalamanPajak extends Component
 {
     public function render()
     {
-        return view('livewire.halaman-pajak');
+        return view('livewire.halaman-pajak')->extends('layouts.main')->section('content');
     }
 }

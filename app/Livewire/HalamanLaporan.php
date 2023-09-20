@@ -8,6 +8,6 @@ class HalamanLaporan extends Component
 {
     public function render()
     {
-        return view('livewire.halaman-laporan');
+        return view('livewire.halaman-laporan')->extends('layouts.main')->section('content');
     }
 }

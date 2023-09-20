@@ -8,6 +8,6 @@ class HalamanClosingToko extends Component
 {
     public function render()
     {
-        return view('livewire.halaman-closing-toko');
+        return view('livewire.halaman-closing-toko')->extends('layouts.main')->section('content');
     }
 }
