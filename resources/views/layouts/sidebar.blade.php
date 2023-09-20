@@ -46,9 +46,7 @@
                   <li>
                      <a
                         class="group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4"
-                        href="#"
-                        @click.prevent="selected = (selected === 'Dashboard' ? '':'Dashboard')"
-                        :class="{ 'bg-graydark dark:bg-meta-4': (selected === 'Dashboard') || (page === 'ecommerce' || page === 'analytics') }"
+                        href="{{ route('dashboard') }}"                       
                         >
                         <svg
                            class="fill-current"
@@ -84,7 +82,7 @@
                   <li>
                      <a
                         class="group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4"
-                        href="calendar.html"
+                        href="{{ route('pengeluaran') }}"
                         @click="selected = (selected === 'Calendar' ? '':'Calendar')"
                         :class="{ 'bg-graydark dark:bg-meta-4': (selected === 'Calendar') && (page === 'calendar') }"
                         >
@@ -100,7 +98,7 @@
                   <li>
                      <a
                         class="group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4"
-                        href="profile.html"
+                        href="{{ route('pemasukan') }}"
                         @click="selected = (selected === 'Profile' ? '':'Profile')"
                         :class="{ 'bg-graydark dark:bg-meta-4': (selected === 'Profile') && (page === 'profile') }"
                         :class="page === 'profile' && 'bg-graydark'"
