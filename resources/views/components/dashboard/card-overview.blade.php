@@ -5,10 +5,10 @@
        
         <div class="mt-4 flex items-end justify-between">
           <div>
+              <span class="text-sm font-medium mb-2">Total Pemasukan/Hari</span>
               <h4 class="text-title-md font-bold text-black dark:text-white">
                 Rp. 3.456K
-              </h4>
-              <span class="text-sm font-medium">Total Pemasukan/Hari</span>
+              </h4>              
           </div>
           
         </div>
@@ -20,10 +20,10 @@
         
         <div class="mt-4 flex items-end justify-between">
           <div>
+            <span class="text-sm font-medium">Total Pengeluaran/Hari</span>
               <h4 class="text-title-md font-bold text-black dark:text-white">
                 Rp. 45,2K
-              </h4>
-              <span class="text-sm font-medium">Total Pengeluaran/Hari</span>
+              </h4>              
           </div>
        
         </div>
@@ -35,10 +35,10 @@
         
         <div class="mt-4 flex items-end justify-between">
           <div>
+              <span class="text-sm font-medium">Total Pemasukan/bulan</span>
               <h4 class="text-title-md font-bold text-black dark:text-white">
                 Rp. 2.450
-              </h4>
-              <span class="text-sm font-medium">Total Pemasukan/bulan</span>
+              </h4>              
           </div>
           
         </div>
@@ -50,10 +50,10 @@
         
         <div class="mt-4 flex items-end justify-between">
           <div>
+             <span class="text-sm font-medium">Total Pengeluaran/bulan</span>
               <h4 class="text-title-md font-bold text-black dark:text-white">
                 Rp. 3.456
-              </h4>
-              <span class="text-sm font-medium">Total Pengeluaran/bulan</span>
+              </h4>              
           </div>
          
         </div>
