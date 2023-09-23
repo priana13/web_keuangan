@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('nota_bon', function (Blueprint $table) {
             $table->id();
+            $table->date('tanggal');
+            $table->string('nama_suplier',100);
+            $table->integer('total');
+            $table->string('status', 20); // Sudah Dibayar , Belum Dibayar
             $table->timestamps();
         });
     }
