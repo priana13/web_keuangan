@@ -21,5 +21,9 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('123456'),
             'type' => 'Administrator'
         ]);
+
+        \App\Models\Kategori::factory(5)->create();
+        \App\Models\Kas::factory(5)->create();
+        \App\Models\Transaksi::factory(100)->create();
     }
 }

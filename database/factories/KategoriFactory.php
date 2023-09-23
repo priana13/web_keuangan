@@ -16,8 +16,11 @@ class KategoriFactory extends Factory
      */
     public function definition(): array
     {
+        $types = ["Pengeluaran", "Pemasukan"];
+
         return [
-            //
+            'nama' => fake()->text(5),
+            'type' => $types[rand(0,1)]
         ];
     }
 }

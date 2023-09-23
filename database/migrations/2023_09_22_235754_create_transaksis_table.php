@@ -26,7 +26,7 @@ return new class extends Migration
             $table->date('tanggal');
             $table->string('type');
             $table->integer('nominal');
-            $table->string('kegerangan');
+            $table->string('keterangan');
 
             $table->unsignedBigInteger('kategori_id');
             $table->foreign('kategori_id')->references('id')->on('kategori');
