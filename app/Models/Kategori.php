@@ -13,4 +13,9 @@ class Kategori extends Model
 
     protected $guarded = [];
 
+    public function transaksi(){
+
+        return $this->hasMany(Transaksi::class, 'kategori_id');
+    }
+
 }

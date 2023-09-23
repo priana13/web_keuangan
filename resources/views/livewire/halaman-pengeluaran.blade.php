@@ -72,20 +72,20 @@
             </thead>
             <tbody>
 
-              @for ($i = 0; $i < 5; $i++)
+              @foreach ($pengeluaran as $row)           
 
               <tr>
                 <td class="border-b border-[#eee] py-5 px-4 pl-9 dark:border-strokedark xl:pl-11">
-                  <h5 class="font-medium text-black dark:text-white">Jan 13,2023</h5>                  
+                  <h5 class="font-medium text-black dark:text-white">{{ $row->tanggal }}</h5>                  
                 </td>
                 <td class="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                  <p class="text-black dark:text-white">Pembelian Bahan Baku</p>
+                  <p class="text-black dark:text-white">{{ $row->keterangan }}</p>
                 </td>
                 <td class="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                  <p class="text-black dark:text-white">Rp. 200.000</p>
+                  <p class="text-black dark:text-white">Rp. {{ number_format($row->nominal,0,',','.')  }}</p>
                 </td>
                 <td class="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                  <p class="text-black dark:text-white">Bahan Baku</p>
+                  <p class="text-black dark:text-white">{{ $row->kategori->nama }}</p>
                 </td>
                 <td class="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
                   <div class="flex items-center space-x-3.5">
@@ -105,14 +105,23 @@
                   </div>
                 </td>
               </tr>                  
-              @endfor
+              @endforeach
               
             
             </tbody>
           </table>
+         
+        </div>   
+        
+        {{-- paginate --}}
+        <div class="my-3">
+           {{ $pengeluaran->links() }}
+
         </div>
+       
       </div>
 
+    
       {{-- akhir table --}}
     
     </div>
