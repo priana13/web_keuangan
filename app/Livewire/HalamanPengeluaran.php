@@ -2,13 +2,14 @@
 
 namespace App\Livewire;
 
+use App\Models\Kategori;
 use App\Models\Transaksi;
 use Livewire\Component;
-use Livewire\WithPagination;
+// use Livewire\WithPagination;
 
 class HalamanPengeluaran extends Component
 {
-    use WithPagination;
+    // use WithPagination;
     
     // public $record;
 
@@ -20,7 +21,14 @@ class HalamanPengeluaran extends Component
     {      
         $pengeluaran = Transaksi::pengeluaran()->paginate(10);
 
-        return view('livewire.halaman-pengeluaran' , compact('pengeluaran'))
+        $kategori = Kategori::all();
+
+        return view('livewire.halaman-pengeluaran' , compact('pengeluaran', 'kategori'))
         ->extends('layouts.main')->section('content');
+    }
+
+    public function save(){
+
+        
     }
 }

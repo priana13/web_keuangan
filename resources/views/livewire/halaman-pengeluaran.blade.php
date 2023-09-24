@@ -13,9 +13,9 @@
     {{-- top action start--}}
     <div class="mb-2 mt-12 flex justify-between">
 
-      <a href="#" class="inline-flex items-center justify-center gap-2.5 rounded-lg bg-black py-2 px-5 text-center font-medium text-white hover:bg-opacity-90 lg:px-5">     
+      <button data-modal-target="defaultModal" data-modal-toggle="defaultModal" href="#" class="inline-flex items-center justify-center gap-2.5 rounded-lg bg-black py-2 px-5 text-center font-medium text-white hover:bg-opacity-90 lg:px-5" type="button">     
         Tambah
-      </a>
+      </button>
 
       <div class="flex">
 
@@ -112,7 +112,8 @@
           </table>
          
         </div>   
-        
+
+                
         {{-- paginate --}}
         <div class="my-3">
            {{ $pengeluaran->links() }}
@@ -123,6 +124,8 @@
 
     
       {{-- akhir table --}}
+
+      @include('livewire.partial.modal-input-pengeluaran')
     
     </div>
 
