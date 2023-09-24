@@ -18,7 +18,20 @@
         <!-- Styles -->
         @livewireStyles
     </head>
-    <body class="font-sans antialiased">
+    <body class="font-sans antialiased"
+        x-data="{ 
+            page: 'ecommerce', 
+            'loaded': true, 
+            'darkMode': true, 
+            'stickyMenu': false, 
+            'sidebarToggle': false, 
+            'scrollTop': false,
+            directiveName:'' }"
+        x-init="
+         darkMode = JSON.parse(localStorage.getItem('darkMode'));
+         $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
+
+    >
         <x-banner />
 
         <!-- ===== Preloader Start ===== -->
