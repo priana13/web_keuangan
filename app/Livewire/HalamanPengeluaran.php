@@ -42,6 +42,12 @@ class HalamanPengeluaran extends Component
 
     public function save(){
 
+        $this->validate([ 
+            'tanggal' => 'required|min:3',
+            'keterangan' => 'required|min:3',
+        ]);
+
+
         $kas_selected = Kas::find($this->kas_id);
 
         $pengeluaran = Transaksi::create([

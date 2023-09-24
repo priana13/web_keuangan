@@ -123,28 +123,15 @@
         </div>
        
       </div>
-
     
       {{-- akhir table --}}
 
       @include('livewire.partial.modal-input-pengeluaran')
       @include('livewire.partial.modal-edit-pengeluaran')
 
+      @push('scripts')     
 
-      <script>
-
-        const targetEl = document.getElementById('modal-input-pengeluaran');      
-       
-
-        /*
-        * $targetEl: required
-        * options: optional
-        */
-        const modal = new Modal(targetEl);
-
-        modal.show();
-
-      </script>
+      @endpush
     
     </div>
 

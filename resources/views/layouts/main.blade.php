@@ -70,11 +70,17 @@
 
         </div>
 
-        @stack('modals')
+        {{-- @stack('modals') --}}
+
+        {{-- @livewire('livewire-ui-modal') --}}
 
         @livewireScripts
 
         <script defer src="bundle.js"></script>
+
+        @stack('scripts')
+
+     
         
     </body>
 </html>
